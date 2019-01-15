@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		1A46B21321ED36DC004F4CDC /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		1A46B21521ED36F6004F4CDC /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		1A5F20E221E7761D00E5EDA1 /* D02.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D02.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1A5F20E221E7761D00E5EDA1 /* D05.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = D05.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A5F20E521E7761E00E5EDA1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A5F20EA21E7761E00E5EDA1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A5F20EC21E7761E00E5EDA1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -40,7 +40,7 @@
 		1A5F20D921E7761D00E5EDA1 = {
 			isa = PBXGroup;
 			children = (
-				1A5F20E421E7761D00E5EDA1 /* D02 */,
+				1A5F20E421E7761D00E5EDA1 /* D05 */,
 				1A5F20E321E7761D00E5EDA1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -48,12 +48,12 @@
 		1A5F20E321E7761D00E5EDA1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1A5F20E221E7761D00E5EDA1 /* D02.app */,
+				1A5F20E221E7761D00E5EDA1 /* D05.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1A5F20E421E7761D00E5EDA1 /* D02 */ = {
+		1A5F20E421E7761D00E5EDA1 /* D05 */ = {
 			isa = PBXGroup;
 			children = (
 				1A46B21321ED36DC004F4CDC /* ListViewController.swift */,
@@ -64,15 +64,15 @@
 				1A5F20EE21E7761E00E5EDA1 /* LaunchScreen.storyboard */,
 				1A5F20F121E7761E00E5EDA1 /* Info.plist */,
 			);
-			path = D02;
+			path = D05;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		1A5F20E121E7761D00E5EDA1 /* D02 */ = {
+		1A5F20E121E7761D00E5EDA1 /* D05 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 1A5F20F421E7761E00E5EDA1 /* Build configuration list for PBXNativeTarget "D02" */;
+			buildConfigurationList = 1A5F20F421E7761E00E5EDA1 /* Build configuration list for PBXNativeTarget "D05" */;
 			buildPhases = (
 				1A5F20DE21E7761D00E5EDA1 /* Sources */,
 				1A5F20DF21E7761D00E5EDA1 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = D02;
+			name = D05;
 			productName = D02;
-			productReference = 1A5F20E221E7761D00E5EDA1 /* D02.app */;
+			productReference = 1A5F20E221E7761D00E5EDA1 /* D05.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +103,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 1A5F20DD21E7761D00E5EDA1 /* Build configuration list for PBXProject "D02" */;
+			buildConfigurationList = 1A5F20DD21E7761D00E5EDA1 /* Build configuration list for PBXProject "D05" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +116,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				1A5F20E121E7761D00E5EDA1 /* D02 */,
+				1A5F20E121E7761D00E5EDA1 /* D05 */,
 			);
 		};
 /* End PBXProject section */
@@ -279,9 +279,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = D02/Info.plist;
+				INFOPLIST_FILE = D05/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dhervy.D02;
+				PRODUCT_BUNDLE_IDENTIFIER = dhervy.D05;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,9 +293,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = D02/Info.plist;
+				INFOPLIST_FILE = D05/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = dhervy.D02;
+				PRODUCT_BUNDLE_IDENTIFIER = dhervy.D05;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -305,7 +305,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		1A5F20DD21E7761D00E5EDA1 /* Build configuration list for PBXProject "D02" */ = {
+		1A5F20DD21E7761D00E5EDA1 /* Build configuration list for PBXProject "D05" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A5F20F221E7761E00E5EDA1 /* Debug */,
@@ -314,7 +314,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		1A5F20F421E7761E00E5EDA1 /* Build configuration list for PBXNativeTarget "D02" */ = {
+		1A5F20F421E7761E00E5EDA1 /* Build configuration list for PBXNativeTarget "D05" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1A5F20F521E7761E00E5EDA1 /* Debug */,

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uut-a3-cSD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Uut-a3-cSD">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,7 +14,7 @@
         <!--List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="List" id="BYZ-38-t0r" customClass="ListViewController" customModule="D02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="List" id="BYZ-38-t0r" customClass="ListViewController" customModule="D05" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +31,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dkj-S0-n12">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="102.66666666666667"/>
+                                                    <rect key="frame" x="15" y="0.0" width="384" height="102.66666666666667"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -66,7 +67,7 @@
         <!--Map-->
         <scene sceneID="3kl-lJ-fyo">
             <objects>
-                <viewController title="Map" id="JVY-nl-3gX" customClass="MapViewController" customModule="D02" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Map" id="JVY-nl-3gX" customClass="MapViewController" customModule="D05" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zm9-lx-UDk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -85,6 +86,16 @@
                                     <action selector="changeMode:" destination="JVY-nl-3gX" eventType="valueChanged" id="6de-vx-ohs"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VFF-pz-0fB">
+                                <rect key="frame" x="364" y="597" width="32" height="32"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" image="iconLocation">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="locationButton:" destination="JVY-nl-3gX" eventType="touchUpInside" id="pEm-MO-AXb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -92,9 +103,11 @@
                             <constraint firstItem="hDY-yv-0qe" firstAttribute="centerX" secondItem="Mih-EI-1b6" secondAttribute="centerX" id="1nx-2Z-4UT"/>
                             <constraint firstItem="8If-5t-Abf" firstAttribute="bottom" secondItem="Mih-EI-1b6" secondAttribute="bottom" id="Q2R-hn-GmJ"/>
                             <constraint firstItem="hDY-yv-0qe" firstAttribute="top" secondItem="Mih-EI-1b6" secondAttribute="bottom" constant="-50" id="XzM-S4-AWL"/>
+                            <constraint firstItem="hDY-yv-0qe" firstAttribute="top" secondItem="VFF-pz-0fB" secondAttribute="bottom" constant="8" id="Y1V-pG-cCm"/>
                             <constraint firstItem="hDY-yv-0qe" firstAttribute="width" secondItem="Mih-EI-1b6" secondAttribute="width" multiplier="0.7" id="gi4-Do-qLv"/>
                             <constraint firstItem="8If-5t-Abf" firstAttribute="trailing" secondItem="Mih-EI-1b6" secondAttribute="trailing" id="oZu-LB-pVg"/>
                             <constraint firstItem="Mih-EI-1b6" firstAttribute="top" secondItem="8If-5t-Abf" secondAttribute="top" id="v76-2l-A6L"/>
+                            <constraint firstItem="VFF-pz-0fB" firstAttribute="leading" secondItem="Mih-EI-1b6" secondAttribute="trailing" constant="-50" id="vhn-eF-JUg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="8If-5t-Abf"/>
                     </view>
@@ -114,6 +127,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Uut-a3-cSD" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a09-q5-0yE">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -127,4 +141,7 @@
             <point key="canvasLocation" x="2094.202898550725" y="-57.880434782608702"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iconLocation" width="32" height="32"/>
+    </resources>
 </document>

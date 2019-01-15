@@ -8,12 +8,13 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
 class MyPointAnnotation : MKPointAnnotation {
     var pinTintColor: UIColor?
 }
 
-class MapViewController: UIViewController, MKMapViewDelegate {
+class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     @IBOutlet weak var mapView: MKMapView! {
         didSet {
             mapView.delegate = self
@@ -34,12 +35,35 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         }
     }
     
+    var locationManager = CLLocationManager()
+    
+    @IBAction func locationButton(_ sender: Any) {
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.distanceFilter = 10
+        locationManager.startUpdatingLocation()
+        
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        
+        let location : CLLocation = locations[0]
+        
+        let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
+        let location2D:CLLocationCoordinate2D = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude)
+        let region:MKCoordinateRegion = MKCoordinateRegionMake(location2D, span)
+        mapView?.setRegion(region, animated: true)
+        self.mapView.showsUserLocation = true
+    }
+    
+    
     var delegate: ListViewController?
     
     var place: Place? {
         didSet {
             if let p = place {
-                print(p)
+                locationManager.stopUpdatingLocation()
                 let span:MKCoordinateSpan = MKCoordinateSpanMake(0.01, 0.01)
                 let location:CLLocationCoordinate2D = CLLocationCoordinate2DMake(p.latitude, p.longitude)
                 let region:MKCoordinateRegion = MKCoordinateRegionMake(location, span)
